@@ -24,7 +24,7 @@ public class Ingredient {
     public String getName() {
         return name;
     }
-
+// нужен тест для проверки enum IngredientType
     public IngredientType getType() {
         return type;
     }

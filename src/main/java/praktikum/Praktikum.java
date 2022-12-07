@@ -2,6 +2,7 @@ package praktikum;
 
 import java.util.List;
 
+// Этот класс не тестируем, т.к. он нужен просто для запуска приложения
 public class Praktikum {
 
     public static void main(String[] args) {
