@@ -1,21 +1,39 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import praktikum.Bun;
 
+@RunWith(Parameterized.class)
 public class BunTest {
-    @Test
-    public void getPriceWhiteBunReturn200() {
-        Bun bun = new Bun("white bun", 200);
-        float expectedPrice = 200;
-        float actualPrice = bun.getPrice();
-        Assert.assertEquals("white bun price is 200", expectedPrice, actualPrice, 0.0);
+    private final float bunPrice;
+    private final String bunName;
+
+    public BunTest(float bunPrice, String bunName) {
+        this.bunPrice = bunPrice;
+        this.bunName = bunName;
+    }
+
+    @Parameterized.Parameters
+    public static Object[][] data() {
+        return new Object[][]{
+                {100, "black bun"},
+                {200, "white bun"},
+                {300, "red bun"},
+        };
     }
 
     @Test
-    public void getNameRedBunReturnRedBun() {
-        Bun bun = new Bun("red bun", 300);
-        String expectedName = "red bun";
+    public void getPriceReturnRightValue() {
+        Bun bun = new Bun(bunName, bunPrice);
+        float actualPrice = bun.getPrice();
+        Assert.assertEquals("bun price isn`t correct", bunPrice, actualPrice, 0.0);
+    }
+
+    @Test
+    public void getNameReturnRightBun() {
+        Bun bun = new Bun(bunName, bunPrice);
         String actualName = bun.getName();
-        Assert.assertEquals("red bun name is wrong", expectedName, actualName);
+        Assert.assertEquals("bun name is wrong", bunName, actualName);
     }
 }
