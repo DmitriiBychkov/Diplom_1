@@ -20,6 +20,19 @@ public class BunTest {
                 {100, "black bun"},
                 {200, "white bun"},
                 {300, "red bun"},
+                {400, ""},
+                {500, "black bun white bun red bun"},
+                {600, null},
+                {700, "!@#$%^&*()_+"},
+                {800, "батон нарезной"},
+                {900, " red bun "},
+                {1000, "Black bun"},
+                {9999, "wHiTe BuN"},
+                {1234567890, "redbun"},
+                {-100, "black bun"},
+                {0, "white bun"},
+                {1.4e-45f, "red bun"},
+                {3.4e+38f, "black bun"},
         };
     }
 
