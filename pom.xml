@@ -56,11 +56,8 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <!--id выбираешь самостоятельно-->
                         <id>prepare-agent</id>
-                        <!--в какой фазе maven будет выполняться цель-->
                         <phase>initialize</phase>
-                        <!--цель jacoco, которую нужно выполнить-->
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
