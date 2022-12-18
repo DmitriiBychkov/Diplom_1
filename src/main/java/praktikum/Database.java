@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Класс с методами по работе с базой данных.
  */
+// Этот класс не тестируем, т.к. обычно в настоящую БД не лезем, а только мокаем её
 public class Database {
 
     private final List<Bun> buns = new ArrayList<>();
